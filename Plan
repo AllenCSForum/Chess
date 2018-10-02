@@ -1,0 +1,51 @@
+General:
+Light blue for available squares to move to
+red for available capture
+light up selected piece dark green
+hovered piece light green
+
+Pawn:
+on click:
+if no piece in front: light up square in front
+if first move and no piece within 2 spaces: light up 2 squares in front
+if enemy piece diagonally forward: light up enemy square
+if on other side of board: turn into queen
+functions:
+{
+passantvulnerable: if enemy pawn 1 square to the side: if said pawn selected: light up diagonal square behind team pawn
+on moved 2 spaces: set passantvulnerable = 1
+on next turn: set passantvulnerable = 0
+}
+
+Rook:
+on click
+light up squares in all cardinal directions until run into another piece or edge of board
+light up enemy piece if in the way, then stop
+functions:
+{
+castle: if castle initiated move to the other side of king (2 or 3 spaces depending on side)
+}
+
+Bishop:
+light up squares in all diagonal directions untli run into another piece or edge of board
+light up enemy piece in the way, then stop
+
+Queen
+see Rook + Bishop
+
+Knight
+Light up all squares an "L" shape away from piece unless ally piece is occupying the square or it is off the board
+Ex. if on square 53
+Available moves: 61, 72, 74, 65, 45, 34, 32, 41
+x: +2/+1/-1/-2, y: +2/+1/-1/-2 TOTAL absolute value = 3
+
+King
+Light up all squares 1 square away directionally or diagonally, UNLESS
+1. ally piece occupyes the square
+2. square is off the board
+3. enemy piece has the ability to move to new square next move
+If king is currently being threatened by another piece, and if king has no available moves using the above ruleset, and if no ally piece can block the attack(s), and if no ally piece can capture the attacking piece(s): other team wins
+Functions:
+{
+Castle: If King moves = 0 and CastlingRook moves = 0 and no pieces between king and CastlingRook and no piece threatening new king spot or new rook spot: castle(left/right) = 1        once a condition is no longer met: castle(left/right) = 0
+}
