@@ -27,7 +27,7 @@ castle: if castle initiated move to the other side of king (2 or 3 spaces depend
 }
 
 Bishop:
-light up squares in all diagonal directions untli run into another piece or edge of board
+light up squares in all diagonal directions until run into another piece or edge of board
 light up enemy piece in the way, then stop
 
 Queen
