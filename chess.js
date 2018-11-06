@@ -48,30 +48,37 @@ function createBoard() {
 			}
 			//white piece
 			else if (rowIndex >= BOARD_SIZE - 2) {
-
+				piece.classList.add("whitePiece");
+				piece.classList.add("piece");
 				//pawn
 				if (rowIndex == BOARD_SIZE - 1) {
 					piece.setAttribute("src", "white_pawn.png");
+					piece.classList.add("pawn");
 				}
 				//rook
 				else if (colIndex == 0 || colIndex == BOARD_SIZE - 1) {
-
+					piece.setAttribute("src", "white_rook.png");
+					piece.classList.add("rook");
 				}
 				//knight
 				else if (colIndex == 1 || colIndex == BOARD_SIZE - 2) {
-
+					piece.setAttribute("src", "white_knight.png");
+					piece.classList.add("knight");
 				}
 				//bishop
 				else if (colIndex == 2 || colIndex == BOARD_SIZE - 3) {
-
+					piece.setAttribute("src", "white_bishop.png");
+					piece.classList.add("bishop");
 				}
 				//queen
 				else if (colIndex == 3) {
-
+					piece.setAttribute("src", "white_queen.png");
+					piece.classList.add("queen");
 				}
 				//king
 				else {
-					
+					piece.setAttribute("src", "white_king.png");
+					piece.classList.add("king");
 				}
 			}
 		} 
