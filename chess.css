@@ -1,16 +1,25 @@
-#chessBoard td {
-	height: calc(50vh / 8);
-	width: calc(50vh / 8);
-	border: solid;
+#chessBoard {
 	border-collapse: collapse;
+	margin: auto;
+}
+
+#chessBoard td {
+	height: calc(50vh / 5);
+	width: calc(50vh / 5);
+	border: solid;
 }
 
 .blackSquare {
-	background-color: brown;
+	background-color: #6d3c03;
 }
 
 .whiteSquare {
-	background-color: white;
+	background-color: #ffe1a0;
+}
+
+.piece {
+	height: 100%;
+	width: 100%;
 }
 
 .movableSpace {
